@@ -339,14 +339,7 @@ function unCheckRadioButtons() {
     }
 }
 
-<?php
-$data= playerScore
-$fp = fopen('data.txt', 'w');
-fwrite($fp, $data);
-fclose($fp);
-?>
-
-
+$.ajax({ type:"POST", url: "index.php", data: {var1: playerScore}, success: function(){}
 // function for when all questions being answered
 function handleEndGame() {
     let remark = null
