@@ -1,6 +1,8 @@
-<?php
- $ajax_var1 = $_POST['var1'];
- $fp = fopen('data.txt', 'w');
- fwrite($fp, $ajax_var1);
- fclose($fp);
+<?php 
+if (isset($_GET['x'])) {
+     $x1 = $_GET['x'];
+     $fp = fopen("data.txt", "w") or die("Unable to open file!");
+     fwrite($fp, $x1);
+     fclose($fp);
+  }
 ?>

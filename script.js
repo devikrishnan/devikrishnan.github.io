@@ -305,6 +305,7 @@ function checkForAnswer() {
     })
 }
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
 
 //called when the next button is called
@@ -318,6 +319,7 @@ function handleNextQuestion() {
         }
         else {
             handleEndGame()
+            sendtophp()
         }
         resetOptionBackground()
     }, 1000);
@@ -368,6 +370,19 @@ function handleEndGame() {
     document.getElementById('score-modal').style.display = "flex"
 
 }
+
+function sendtophp(){
+var data1 = document.getElementById('right-answers').value;
+$.ajax({
+          type: "POST",
+          url: 'index.php',
+          data: {x: data1 },
+          success: function(data)
+          {
+             alert("success! X:" + data);
+          }
+
+      });
 
 //closes score modal and resets game
 function closeScoreModal() {
