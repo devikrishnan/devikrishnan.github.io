@@ -313,7 +313,7 @@ function handleNextQuestion() {
     unCheckRadioButtons()
     //delays next question displaying for a second
     setTimeout(() => {
-        if (indexNumber <= 4) {
+        if (indexNumber <= 9) {
             NextQuestion(indexNumber)
         }
         else {
@@ -338,6 +338,14 @@ function unCheckRadioButtons() {
         options[i].checked = false;
     }
 }
+
+<?php
+$data= playerScore
+$fp = fopen('data.txt', 'w');
+fwrite($fp, $data);
+fclose($fp);
+?>
+
 
 // function for when all questions being answered
 function handleEndGame() {
