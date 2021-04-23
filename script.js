@@ -370,11 +370,11 @@ function handleEndGame() {
 }
 
 function sendtophp(playerScore){
-var data1 = playerScore;
-$.ajax({
+	//var data1 = playerScore;
+	$.ajax({
           type: "POST",
           url: 'index.php',
-          data: {x: data1 },
+          data: {x: playerScore },
           success: function(data)
           {
              alert("success! X:" + data);
