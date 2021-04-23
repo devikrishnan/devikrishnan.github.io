@@ -372,7 +372,7 @@ function handleEndGame() {
 }
 
 function sendtophp(){
-var data1 = playerScore;
+var data1 = document.getElementById('right-answers').value;
 $.ajax({
           type: "POST",
           url: 'index.php',
@@ -383,6 +383,7 @@ $.ajax({
           }
 
       });
+
 }
 //closes score modal and resets game
 function closeScoreModal() {
