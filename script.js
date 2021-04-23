@@ -305,8 +305,6 @@ function checkForAnswer() {
     })
 }
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-
 
 //called when the next button is called
 function handleNextQuestion() {
@@ -319,7 +317,7 @@ function handleNextQuestion() {
         }
         else {
             handleEndGame()
-            sendtophp()
+            sendtophp(playerScore)
         }
         resetOptionBackground()
     }, 1000);
@@ -371,8 +369,8 @@ function handleEndGame() {
 
 }
 
-function sendtophp(){
-var data1 = document.getElementById('right-answers').value;
+function sendtophp(playerScore){
+var data1 = playerScore;
 $.ajax({
           type: "POST",
           url: 'index.php',
