@@ -383,7 +383,7 @@ $.ajax({
           }
 
       });
-
+}
 //closes score modal and resets game
 function closeScoreModal() {
     questionNumber = 1
