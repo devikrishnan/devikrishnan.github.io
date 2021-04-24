@@ -385,7 +385,7 @@ function sendtophp(playerScore){
    // Fire off the request to /form.php 
   request = $.ajax({ 
              url: "index.php", 
-             type: "POST", 
+             type: "GET", 
              data: {x: playerScore }
    }); // Callback handler that will be called on success 
             
