@@ -386,7 +386,7 @@ function sendtophp(playerScore){
    request = $.ajax({ 
              url: "index.php", 
              type: "post", 
-             data: playScore.serialize()
+             data: {x: playerScore }
              }); // Callback handler that will be called on success 
             
    request.done(function (response, textStatus, jqXHR){
