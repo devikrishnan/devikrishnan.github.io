@@ -371,7 +371,7 @@ function handleEndGame() {
 
 function sendtophp(playerScore){
 	//var data1 = playerScore;
-	$.ajax({
+	/*$.ajax({
           type: "POST",
           url: 'index.php',
           data: {x: playerScore },
@@ -380,18 +380,18 @@ function sendtophp(playerScore){
              alert("success! X:" + data);
           }
 
-      });
+      });*/
    
    // Fire off the request to /form.php 
-  /* request = $.ajax({ 
+  request = $.ajax({ 
              url: "index.php", 
-             type: "post", 
+             type: "POST", 
              data: {x: playerScore }
-             }); // Callback handler that will be called on success 
+   }); // Callback handler that will be called on success 
             
    request.done(function (response, textStatus, jqXHR){
           // Log a message to the 
-          console.log("Hooray, it worked!"); 
+          //console.log("Hooray, it worked!"); 
    }); 
    
    // Callback handler that will be called on failure 
@@ -399,7 +399,7 @@ function sendtophp(playerScore){
    // Log the error to the console 
    console.error( "The following error occurred: "+ textStatus, errorThrown );
     
-   }); */
+   }); 
    
    //$.post('index.php', playScore, function(response) { 
    // Log the response to the console 
