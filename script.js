@@ -371,16 +371,21 @@ function handleEndGame() {
 
 function sendtophp(playerScore){
 	//var data1 = playerScore;
-	$.ajax({
-          type: "POST",
-          url: 'index.php',
-          data: {x: playerScore },
-          success: function(data)
-          {  console.log(data);
-             alert("success! X:" + data);
-          }
+	//$.ajax({
+       //   type: "POST",
+    //      url: 'index.php',
+     //     data: {x: playerScore },
+    //      success: function(data)
+      //    {  console.log(data);
+       //      alert("success! X:" + data);
+       //   }
 
-      });
+   //   });
+   $.post('/index.php', playScore, function(response) { 
+   // Log the response to the console 
+   console.log("Response: "+response); 
+   });
+
 
 }
 //closes score modal and resets game
