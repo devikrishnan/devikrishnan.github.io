@@ -376,7 +376,7 @@ function sendtophp(playerScore){
           url: 'index.php',
           data: {x: playerScore },
           success: function(data)
-          {
+          {  console.log(data);
              alert("success! X:" + data);
           }
 
