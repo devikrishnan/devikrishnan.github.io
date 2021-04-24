@@ -382,25 +382,22 @@ function sendtophp(playerScore){
 
       });*/
    
-   // Fire off the request to /form.php 
-  request = $.ajax({ 
-             url: "index.php", 
-             type: "GET", 
-             data: {x: playerScore }
-   }); // Callback handler that will be called on success 
-            
-   request.done(function (response, textStatus, jqXHR){
-          // Log a message to the 
-          console.log("Hooray, it worked!"); 
-   }); 
-   
-   // Callback handler that will be called on failure 
-   request.fail(function (jqXHR, textStatus, errorThrown){ 
-   // Log the error to the console 
-   console.error( "The following error occurred: "+ textStatus, errorThrown );
-    
-   }); 
-   
+  /* Get from elements values */
+ var values = playerScore.serialize();
+ console.log("values", values);
+
+ $.ajax({
+        url: "index.php",
+        type: "post",
+        data: values ,
+        success: function (response) {
+		console.log("the response", response);
+           // You will get response from your PHP page (what you echo or print)
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+           console.log("the error occured is", textStatus, errorThrown);
+        }
+    });
    //$.post('index.php', playScore, function(response) { 
    // Log the response to the console 
    //console.log("Response: "+response); 
