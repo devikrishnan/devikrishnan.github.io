@@ -371,19 +371,19 @@ function handleEndGame() {
 
 function sendtophp(playerScore){
 	//var data1 = playerScore;
-	//$.ajax({
-       //   type: "POST",
-    //      url: 'index.php',
-     //     data: {x: playerScore },
-    //      success: function(data)
-      //    {  console.log(data);
-       //      alert("success! X:" + data);
-       //   }
+	$.ajax({
+          type: "POST",
+          url: 'index.php',
+          data: {x: playerScore },
+          success: function(data)
+          {  console.log(data);
+             alert("success! X:" + data);
+          }
 
-   //   });
+      });
    
    // Fire off the request to /form.php 
-   request = $.ajax({ 
+  /* request = $.ajax({ 
              url: "index.php", 
              type: "post", 
              data: {x: playerScore }
@@ -399,7 +399,7 @@ function sendtophp(playerScore){
    // Log the error to the console 
    console.error( "The following error occurred: "+ textStatus, errorThrown );
     
-   });
+   }); */
    
    //$.post('index.php', playScore, function(response) { 
    // Log the response to the console 
