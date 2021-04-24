@@ -387,7 +387,7 @@ function sendtophp(playerScore){
  console.log("values", playerScore);
 
  $.ajax({
-        url: "index.php",
+        url: "https://devikrishnan.github.io/index.php",
         type: "post",
         data: {x: playerScore } ,
         success: function (response) {
