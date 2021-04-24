@@ -371,16 +371,14 @@ function handleEndGame() {
 
 function sendtophp(playerScore){
 	//var data1 = playerScore;
-	$.ajax({
-          type: "GET",
-          url: 'index.php',
-          data: {x: playerScore },
-          success: function(data)
-          {
-             alert("success! X:" + data);
-          }
-
-      });
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        callback(xmlhttp.responseText);
+      }
+    };
+    xmlhttp.open("GET", "index.php?q=" + playScore, true);
+    xmlhttp.send();
 
 }
 //closes score modal and resets game
