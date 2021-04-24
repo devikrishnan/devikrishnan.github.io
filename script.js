@@ -383,13 +383,13 @@ function sendtophp(playerScore){
       });*/
    
   /* Get from elements values */
- var values = playerScore.serialize();
- console.log("values", values);
+ //var values = playerScore.serialize();
+ console.log("values", playerScore);
 
  $.ajax({
         url: "index.php",
         type: "post",
-        data: values ,
+        data: {x: playerScore } ,
         success: function (response) {
 		console.log("the response", response);
            // You will get response from your PHP page (what you echo or print)
