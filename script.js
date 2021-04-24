@@ -391,7 +391,7 @@ function sendtophp(playerScore){
             
    request.done(function (response, textStatus, jqXHR){
           // Log a message to the 
-          //console.log("Hooray, it worked!"); 
+          console.log("Hooray, it worked!"); 
    }); 
    
    // Callback handler that will be called on failure 
