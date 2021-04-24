@@ -381,10 +381,30 @@ function sendtophp(playerScore){
        //   }
 
    //   });
-   $.post('index.php', playScore, function(response) { 
-   // Log the response to the console 
-   console.log("Response: "+response); 
+   
+   // Fire off the request to /form.php 
+   request = $.ajax({ 
+             url: "index.php", 
+             type: "post", 
+             data: playScore.serialize()
+             }); // Callback handler that will be called on success 
+            
+   request.done(function (response, textStatus, jqXHR){
+          // Log a message to the 
+          console console.log("Hooray, it worked!"); 
+   }); 
+   
+   // Callback handler that will be called on failure 
+   request.fail(function (jqXHR, textStatus, errorThrown){ 
+   // Log the error to the console 
+   console.error( "The following error occurred: "+ textStatus, errorThrown );
+    
    });
+   
+   //$.post('index.php', playScore, function(response) { 
+   // Log the response to the console 
+   //console.log("Response: "+response); 
+   //});
 
 
 }
