@@ -381,7 +381,7 @@ function sendtophp(playerScore){
        //   }
 
    //   });
-   $.post('/index.php', playScore, function(response) { 
+   $.post('index.php', playScore, function(response) { 
    // Log the response to the console 
    console.log("Response: "+response); 
    });
