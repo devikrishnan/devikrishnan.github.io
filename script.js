@@ -389,7 +389,7 @@ function sendtophp(playerScore){
 
  $.ajax({
  	type: 'GET',
-        url: "index.php",
+        url: "/index.php",
         data: {x: playerScore } ,
         success: function (response) {
 		console.log("the response", response);
