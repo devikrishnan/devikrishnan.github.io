@@ -1,8 +1,8 @@
 <?php 
 	
-if (isset($_POST['x'])){
+if (isset($_GET['x'])){
 
-  echo $_POST['x']; // Echo state.
+  echo $_GET['x']; // Echo state.
 
 
 }

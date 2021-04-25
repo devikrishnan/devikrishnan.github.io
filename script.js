@@ -388,7 +388,7 @@ function sendtophp(playerScore){
  //console.log("values", playerScore);
 
  $.ajax({
- 	type: 'POST',
+ 	type: 'GET',
         url: "index.php",
         data: {x: playerScore } ,
         success: function (response) {
