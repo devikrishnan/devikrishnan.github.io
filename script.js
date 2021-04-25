@@ -316,8 +316,9 @@ function handleNextQuestion() {
             NextQuestion(indexNumber)
         }
         else {
-            handleEndGame()
             sendtophp(playerScore)
+            handleEndGame()
+            
         }
         resetOptionBackground()
     }, 1000);
