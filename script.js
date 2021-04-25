@@ -384,11 +384,11 @@ function sendtophp(playerScore){
    
   /* Get from elements values */
  //var values = playerScore.serialize();
- console.log("values", playerScore);
+ //console.log("values", playerScore);
 
  $.ajax({
-        url: "https://devikrishnan.github.io/index.php",
-        type: "post",
+ 	type: 'POST',
+        url: "index.php",
         data: {x: playerScore } ,
         success: function (response) {
 		console.log("the response", response);
