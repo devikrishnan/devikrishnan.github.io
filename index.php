@@ -1,8 +1,6 @@
 <?php 
-	
-if (isset($_GET['x'])){
 
-  echo $_GET['x']; // Echo state.
+  echo "Hello"; // Echo state.
 
 
 }
