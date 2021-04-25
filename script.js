@@ -312,12 +312,12 @@ function handleNextQuestion() {
     unCheckRadioButtons()
     //delays next question displaying for a second
     setTimeout(() => {
-        if (indexNumber <= 9) {
+        if (indexNumber <= 5) {
             NextQuestion(indexNumber)
         }
         else {
-            sendtophp(playerScore)
             handleEndGame()
+            sendtophp(playerScore)
             
         }
         resetOptionBackground()
