@@ -391,10 +391,9 @@ function sendtophp(playerScore){
  	type: 'GET',
         url: "/index.php",
         data: {x: playerScore } ,
-        success: function (response) {
-		console.log("the response", response);
-           // You will get response from your PHP page (what you echo or print)
-        },
+        success: function(data) {
+   		alert(data); // apple
+	},
         error: function(jqXHR, textStatus, errorThrown) {
            console.log("the error occured is", textStatus, errorThrown);
         }
